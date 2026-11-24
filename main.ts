@@ -21,7 +21,7 @@ case 4:if(sp<1)return K(2);if(sp>255)return K(3);D[sp]=D[sp-1];sp++;break;
 case 5:{if(sp<2)return K(2);const t=D[sp-1];D[sp-1]=D[sp-2];D[sp-2]=t;break;}
 case 6:if(sp<2)return K(2);if(sp>255)return K(3);D[sp]=D[sp-2];sp++;break;
 case 7:{if(sp<3)return K(2);const a=D[sp-3];D[sp-3]=D[sp-2];D[sp-2]=D[sp-1];D[sp-1]=a;break;}
-case 16:case 17:case 18:case 19:case 20:case 21:case 22:case 24:case 25:case 26:case 28:case 29:case 30:case 32:case 33:case 34:{if(sp<2)return K(2);const b=D[sp-1],a=D[sp-2];if(o>=19&&o<=22&&b===0)return K(4);const r=o===16?(a+b)|0:o===17?(a-b)|0:o===18?Math.imul(a,b):o===19?a===-2147483648&&b===-1?a:(a/b)|0:o===20?b===-1?0:a%b|0:o===21?Math.floor((a>>>0)/(b>>>0))|0:o===22?(a>>>0)%(b>>>0)|0:o===24?a&b:o===25?a|b:o===26?a^b:o===28?a<<(b&31):o===29?a>>(b&31):o===30?(a>>>(b&31))|0:o===32?a===b?1:0:o===33?a<b?1:0:(a>>>0)<(b>>>0)?1:0;sp-=2;D[sp++]=r;break;}
+case 16:case 17:case 18:case 19:case 20:case 21:case 22:case 24:case 25:case 26:case 28:case 29:case 30:case 32:case 33:case 34:{if(sp<2)return K(2);const b=D[sp-1],a=D[sp-2];if(o>=19&&o<=22&&b===0)return K(4);const r=o===16?(a+b)|0:o===17?(a-b)|0:o===18?Math.imul(a,b):o===19?(a/b)|0:o===20?a%b|0:o===21?Math.floor((a>>>0)/(b>>>0))|0:o===22?(a>>>0)%(b>>>0)|0:o===24?a&b:o===25?a|b:o===26?a^b:o===28?a<<(b&31):o===29?a>>(b&31):o===30?(a>>>(b&31))|0:o===32?a===b?1:0:o===33?a<b?1:0:(a>>>0)<(b>>>0)?1:0;sp-=2;D[sp++]=r;break;}
 case 23:if(sp<1)return K(2);D[sp-1]=-D[sp-1]|0;break;
 case 27:if(sp<1)return K(2);D[sp-1]=~D[sp-1];break;
 case 48:pc=nx+(((p[nx-2]|p[nx-1]<<8)<<16)>>16);break;
